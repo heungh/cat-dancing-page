@@ -1,0 +1,237 @@
+/* Dancing Cat Animation Styles */
+.cat-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.dancing-cat {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Cat Size */
+@media (max-width: 480px) {
+  .dancing-cat {
+    width: 150px;
+    height: 150px;
+  }
+
+  .dance-stage {
+    width: 200px;
+    bottom: -30px;
+  }
+
+  .stage-light {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stage-light-2 {
+    left: 40px;
+  }
+
+  .stage-light-3 {
+    left: 120px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .dancing-cat {
+    width: 180px;
+    height: 180px;
+  }
+
+  .dance-stage {
+    width: 250px;
+    bottom: -40px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .dancing-cat {
+    width: 250px;
+    height: 250px;
+  }
+
+  .dance-stage {
+    width: 350px;
+    bottom: -60px;
+  }
+
+  .stage-light {
+    width: 80px;
+    height: 80px;
+  }
+
+  .stage-light-2 {
+    left: 80px;
+  }
+
+  .stage-light-3 {
+    left: 240px;
+  }
+}
+
+.cat-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  transform-origin: center bottom;
+}
+
+/* Main Dance Animation */
+.dancing-cat.active .cat-image {
+  animation: catDance var(--animation-duration, 2s) infinite ease-in-out;
+}
+
+/* Alternative Dance Animation Types */
+.dancing-cat.active.spinDance .cat-image {
+  animation: spinDance var(--animation-duration, 2s) infinite ease-in-out;
+}
+
+.dancing-cat.active.bounceDance .cat-image {
+  animation: bounceDance var(--animation-duration, 2s) infinite ease-in-out;
+}
+
+.dancing-cat.active.wiggleDance .cat-image {
+  animation: wiggleDance var(--animation-duration, 2s) infinite ease-in-out;
+}
+
+@keyframes catDance {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  15% {
+    transform: translateY(-20px) rotate(-5deg) scale(1.05);
+  }
+  30% {
+    transform: translateY(-10px) rotate(5deg) scale(0.95);
+  }
+  45% {
+    transform: translateY(-25px) rotate(-8deg) scale(1.1);
+  }
+  60% {
+    transform: translateY(-5px) rotate(8deg) scale(0.9);
+  }
+  75% {
+    transform: translateY(-15px) rotate(-3deg) scale(1.03);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+/* Dance Stage */
+.dance-stage {
+  position: absolute;
+  bottom: -50px;
+  width: 300px;
+  height: 20px;
+  background: linear-gradient(to right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.stage-light {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  animation: stageLight 3s infinite ease-in-out;
+  z-index: -1;
+}
+
+.stage-light-2 {
+  left: 60px;
+  animation-delay: 1s;
+  background: radial-gradient(circle,
+    rgba(255, 192, 203, 0.3) 0%,
+    rgba(255, 192, 203, 0.1) 50%,
+    transparent 100%
+  );
+}
+
+.stage-light-3 {
+  left: 180px;
+  animation-delay: 2s;
+  background: radial-gradient(circle,
+    rgba(173, 216, 230, 0.3) 0%,
+    rgba(173, 216, 230, 0.1) 50%,
+    transparent 100%
+  );
+}
+
+@keyframes stageLight {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* Hover Effects */
+.dancing-cat:hover {
+  transform: scale(1.05);
+}
+
+.dancing-cat:hover .cat-image {
+  animation-duration: 1.5s;
+}
+
+/* Alternative Dance Animations */
+@keyframes spinDance {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(90deg) scale(1.1); }
+  50% { transform: rotate(180deg) scale(0.9); }
+  75% { transform: rotate(270deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes bounceDance {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  25% { transform: translateY(-30px) scaleY(1.1); }
+  50% { transform: translateY(-10px) scaleY(0.9); }
+  75% { transform: translateY(-20px) scaleY(1.05); }
+}
+
+@keyframes wiggleDance {
+  0% { transform: rotate(0deg) translateX(0); }
+  25% { transform: rotate(-10deg) translateX(-5px); }
+  50% { transform: rotate(10deg) translateX(5px); }
+  75% { transform: rotate(-5deg) translateX(-3px); }
+  100% { transform: rotate(0deg) translateX(0); }
+}
+
+/* Performance Optimizations */
+.dancing-cat.active .cat-image {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Pause Animation State */
+.dancing-cat:not(.active) .cat-image {
+  animation: none;
+  transform: translateY(0) rotate(0deg) scale(1);
+  transition: all 0.5s ease-out;
+}
