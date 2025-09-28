@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import granyangGif from '../assets/images/granyang.gif'
+import granyangSvg from '../assets/images/granyang.svg'
 import '../styles/animations.css'
 
 const DancingCat = ({ isAnimating, animationSpeed = 1, animationType = 'catDance' }) => {
@@ -15,7 +15,7 @@ const DancingCat = ({ isAnimating, animationSpeed = 1, animationType = 'catDance
     <div className="cat-container">
       <div className={danceClass} style={animationStyle}>
         <img
-          src={granyangGif}
+          src={granyangSvg}
           alt="Dancing Granyang"
           className="cat-image"
         />

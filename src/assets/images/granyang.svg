@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Granyang Cat Body -->
+  <ellipse cx="100" cy="135" rx="50" ry="40" fill="#ffa726" stroke="#ff8f00" stroke-width="2"/>
+
+  <!-- Granyang Cat Head -->
+  <circle cx="100" cy="75" r="40" fill="#ffa726" stroke="#ff8f00" stroke-width="2"/>
+
+  <!-- Granyang Ears -->
+  <polygon points="70,50 80,30 90,50" fill="#ffa726" stroke="#ff8f00" stroke-width="2"/>
+  <polygon points="110,50 120,30 130,50" fill="#ffa726" stroke="#ff8f00" stroke-width="2"/>
+
+  <!-- Inner ears (pink) -->
+  <polygon points="73,47 78,35 83,47" fill="#ffb74d"/>
+  <polygon points="117,47 122,35 127,47" fill="#ffb74d"/>
+
+  <!-- Granyang Eyes (big and sparkly) -->
+  <ellipse cx="88" cy="70" rx="8" ry="12" fill="#2c3e50"/>
+  <ellipse cx="112" cy="70" rx="8" ry="12" fill="#2c3e50"/>
+
+  <!-- Eye highlights -->
+  <ellipse cx="90" cy="67" rx="3" ry="4" fill="#ffffff"/>
+  <ellipse cx="114" cy="67" rx="3" ry="4" fill="#ffffff"/>
+  <circle cx="91" cy="69" r="1.5" fill="#ffffff"/>
+  <circle cx="115" cy="69" r="1.5" fill="#ffffff"/>
+
+  <!-- Granyang Nose (heart-shaped) -->
+  <path d="M 100 82 Q 95 78 92 82 Q 95 86 100 90 Q 105 86 108 82 Q 105 78 100 82 Z" fill="#ff5722"/>
+
+  <!-- Granyang Mouth (cheerful) -->
+  <path d="M 100 90 Q 92 96 88 92" stroke="#ff8f00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 100 90 Q 108 96 112 92" stroke="#ff8f00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Granyang Whiskers -->
+  <line x1="60" y1="75" x2="82" y2="73" stroke="#ff8f00" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="60" y1="82" x2="82" y2="82" stroke="#ff8f00" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="118" y1="73" x2="140" y2="75" stroke="#ff8f00" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="118" y1="82" x2="140" y2="82" stroke="#ff8f00" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Granyang Cheeks (blushing) -->
+  <circle cx="68" cy="80" r="6" fill="#ffab91" opacity="0.7"/>
+  <circle cx="132" cy="80" r="6" fill="#ffab91" opacity="0.7"/>
+
+  <!-- Granyang Legs -->
+  <ellipse cx="75" cy="160" rx="10" ry="18" fill="#ffa726" stroke="#ff8f00" stroke-width="2"/>
+  <ellipse cx="95" cy="165" rx="10" ry="18" fill="#ffa726" stroke="#ff8f00" stroke-width="2"/>
+  <ellipse cx="105" cy="165" rx="10" ry="18" fill="#ffa726" stroke="#ff8f00" stroke-width="2"/>
+  <ellipse cx="125" cy="160" rx="10" ry="18" fill="#ffa726" stroke="#ff8f00" stroke-width="2"/>
+
+  <!-- Granyang Paws -->
+  <circle cx="75" cy="178" r="8" fill="#ff8f00"/>
+  <circle cx="95" cy="183" r="8" fill="#ff8f00"/>
+  <circle cx="105" cy="183" r="8" fill="#ff8f00"/>
+  <circle cx="125" cy="178" r="8" fill="#ff8f00"/>
+
+  <!-- Paw pads -->
+  <circle cx="75" cy="178" r="4" fill="#ff5722"/>
+  <circle cx="95" cy="183" r="4" fill="#ff5722"/>
+  <circle cx="105" cy="183" r="4" fill="#ff5722"/>
+  <circle cx="125" cy="178" r="4" fill="#ff5722"/>
+
+  <!-- Granyang Tail (curly and expressive) -->
+  <path d="M 150 135 Q 170 120 180 140 Q 185 165 165 175 Q 145 180 155 160"
+        stroke="#ff8f00" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+  <!-- Granyang Belly -->
+  <ellipse cx="100" cy="145" rx="30" ry="25" fill="#ffcc80"/>
+
+  <!-- Granyang Collar (optional cute accessory) -->
+  <ellipse cx="100" cy="105" rx="35" ry="6" fill="#e91e63" opacity="0.8"/>
+  <circle cx="100" cy="105" r="3" fill="#ffc107"/>
+
+  <!-- Granyang Heart (on chest) -->
+  <path d="M 100 125 Q 95 120 90 125 Q 95 130 100 135 Q 105 130 110 125 Q 105 120 100 125 Z"
+        fill="#ff4081" opacity="0.6"/>
+</svg>
